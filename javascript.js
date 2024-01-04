@@ -51,9 +51,9 @@ function game() {
     const gameOneResult = playRound(playerSelection, computerSelection);
     console.log(gameOneResult);
     if (gameOneResult.slice(0, 5) === "You w") {
-        playerScore = ++playerScore;
+        ++playerScore;
     } else if (gameOneResult.slice(0, 5) === "You l") {
-        computerScore = ++computerScore;
+        ++computerScore;
     }
 
     playerSelection = prompt("Choose one of the following: rock, paper or scissors.");
@@ -61,9 +61,9 @@ function game() {
     const gameTwoResult = playRound(playerSelection, computerSelection);
     console.log(gameTwoResult);
     if (gameTwoResult.slice(0, 5) === "You w") {
-        playerScore = ++playerScore;
+        ++playerScore;
     } else if (gameTwoResult.slice(0, 5) === "You l") {
-        computerScore = ++computerScore;
+        ++computerScore;
     }
 
 
@@ -72,9 +72,9 @@ function game() {
     const gameThreeResult = playRound(playerSelection, computerSelection);
     console.log(gameThreeResult);
     if (gameThreeResult.slice(0, 5) === "You w") {
-        playerScore = ++playerScore;
+        ++playerScore;
     } else if (gameThreeResult.slice(0, 5) === "You l") {
-        computerScore = ++computerScore;
+        ++computerScore;
     }
 
     playerSelection = prompt("Choose one of the following: rock, paper or scissors.");
@@ -82,9 +82,9 @@ function game() {
     const gameFourResult = playRound(playerSelection, computerSelection);
     console.log(gameFourResult);
     if (gameFourResult.slice(0, 5) === "You w") {
-        playerScore = ++playerScore;
+        ++playerScore;
     } else if (gameFourResult.slice(0, 5) === "You l") {
-        computerScore = ++computerScore;
+        ++computerScore;
     }
 
     playerSelection = prompt("Choose one of the following: rock, paper or scissors.");
@@ -92,9 +92,9 @@ function game() {
     const gameFiveResult = playRound(playerSelection, computerSelection);
     console.log(gameFiveResult);
     if (gameFiveResult.slice(0, 5) === "You w") {
-        playerScore = ++playerScore;
+        ++playerScore;
     } else if (gameFiveResult.slice(0, 5) === "You l") {
-        computerScore = ++computerScore;
+        ++computerScore;
     }
     
     console.log("PScore is ", playerScore)
