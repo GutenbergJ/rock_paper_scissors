@@ -1,6 +1,6 @@
 function getComputerChoice() {
     let randomNumber = String(Math.random());
-    let usableRandomNumber = +randomNumber.slice(2, 4);
+    let usableRandomNumber = +randomNumber.slice(13, 15);
 
     if (usableRandomNumber >= 0 && usableRandomNumber <= 33) {
         return "rock";
@@ -33,6 +33,78 @@ if (playerSelection === "rock" && computerSelection === "rock") {
     return "You lose! Scissors beat paper.";
 } else if (playerSelection === "scissors" && computerSelection === "rock") {
     return "You lose! Rock beats scissors.";
-}}
-const playerSelection = "rock";
-const computerSelection = getComputerChoice(); 
+} else {
+    console.log("Wrong input! Check the spelling!");
+}
+}
+
+function game() {
+    let playerSelection;
+    let computerSelection;
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+    
+    playerSelection = prompt("Choose one of the following: rock, paper or scissors.");
+    computerSelection = getComputerChoice(); 
+    const gameOneResult = playRound(playerSelection, computerSelection);
+    console.log(gameOneResult);
+    if (gameOneResult.slice(0, 5) === "You w") {
+        playerScore = ++playerScore;
+    } else if (gameOneResult.slice(0, 5) === "You l") {
+        computerScore = ++computerScore;
+    }
+
+    playerSelection = prompt("Choose one of the following: rock, paper or scissors.");
+    computerSelection = getComputerChoice(); 
+    const gameTwoResult = playRound(playerSelection, computerSelection);
+    console.log(gameTwoResult);
+    if (gameTwoResult.slice(0, 5) === "You w") {
+        playerScore = ++playerScore;
+    } else if (gameTwoResult.slice(0, 5) === "You l") {
+        computerScore = ++computerScore;
+    }
+
+
+    playerSelection = prompt("Choose one of the following: rock, paper or scissors.");
+    computerSelection = getComputerChoice(); 
+    const gameThreeResult = playRound(playerSelection, computerSelection);
+    console.log(gameThreeResult);
+    if (gameThreeResult.slice(0, 5) === "You w") {
+        playerScore = ++playerScore;
+    } else if (gameThreeResult.slice(0, 5) === "You l") {
+        computerScore = ++computerScore;
+    }
+
+    playerSelection = prompt("Choose one of the following: rock, paper or scissors.");
+    computerSelection = getComputerChoice(); 
+    const gameFourResult = playRound(playerSelection, computerSelection);
+    console.log(gameFourResult);
+    if (gameFourResult.slice(0, 5) === "You w") {
+        playerScore = ++playerScore;
+    } else if (gameFourResult.slice(0, 5) === "You l") {
+        computerScore = ++computerScore;
+    }
+
+    playerSelection = prompt("Choose one of the following: rock, paper or scissors.");
+    computerSelection = getComputerChoice(); 
+    const gameFiveResult = playRound(playerSelection, computerSelection);
+    console.log(gameFiveResult);
+    if (gameFiveResult.slice(0, 5) === "You w") {
+        playerScore = ++playerScore;
+    } else if (gameFiveResult.slice(0, 5) === "You l") {
+        computerScore = ++computerScore;
+    }
+    
+    console.log("PScore is ", playerScore)
+    console.log("CScore is ", computerScore)
+
+    if (playerScore > computerScore) {
+        return "Player wins!"
+    } else if (computerScore > playerScore) {
+        return "Computer wins!"
+    } else {
+        return "Tie! Nobody wins!"
+    }
+}
